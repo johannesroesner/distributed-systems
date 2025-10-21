@@ -9,7 +9,7 @@ public class BankAccount {
     public void bookVacation(){
         synchronized(monitor){
             try{
-                while(balance <= 500){
+                while(balance < 500){
                     monitor.wait();
                 }
             }catch(Exception e){}
