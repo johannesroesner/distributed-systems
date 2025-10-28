@@ -11,7 +11,7 @@ public class Download implements Runnable {
 
 
     public Download(JProgressBar progressBar, CountDownLatch countDownLatch, CyclicBarrier cyclicBarrier){
-        this.duration = new Random().nextInt(11) * 100;
+        this.duration = (new Random().nextInt(10) + 1) * 100;
         this.progressBar = progressBar;
         this.countDownLatch = countDownLatch;
         this.cyclicBarrier = cyclicBarrier;
