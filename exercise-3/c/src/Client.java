@@ -16,10 +16,13 @@ public class Client {
 
       new Thread(() -> {
         while(true){
-          System.out.println("please enter a word:");
-          String input = scanner.nextLine();
-          writer.println(input);
-          writer.flush();
+          try{
+            Thread.sleep(100);
+            System.out.println("please enter a word:");
+            String input = scanner.nextLine();
+            writer.println(input);
+            writer.flush();
+          } catch(Exception e){}
         }
       }).start();
 
@@ -31,6 +34,7 @@ public class Client {
           } catch(Exception e){}
         }
       }).start();
+
     } catch(Exception e){}
   }
 }

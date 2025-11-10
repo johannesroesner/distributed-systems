@@ -16,13 +16,13 @@ public class Worker implements Runnable {
     try{
       OutputStream out = socket.getOutputStream();
       PrintWriter writer = new PrintWriter(out);
- 
+
       for(String line : lines){
         writer.println(line);
       }
 
       writer.flush();
-
+      socket.close();
     } catch(Exception e){}
   }
 }
