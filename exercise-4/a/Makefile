@@ -1,5 +1,5 @@
 run-client:
-	@ java -jar client.jar
+	@ java -cp build Client
 
 run-server: build
 	@ java -cp build Server
